@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+</head>
+<body>
+    <h1>Different shapes</h1>
+    <img src="images/triangle.jpg" id="shape">
+    <br>
+    <br>
+    <button id="btn">Press</button>
+    <script>
+        let shape=document.getElementById("shape");
+        let btn=document.getElementById("btn");
+
+       let shapes=[
+        'images/triangle.jpg',
+        'images/circle.jpg',
+        'images/squarergb_p.png'
+       ];
+       let index=0;
+
+       btn.onclick=function(){
+        if(index<shapes.length-1){
+            index=index+1;
+
+        }else{
+            index=0;
+        }
+        shape.src=shapes[index];
+       };
+    </script>
+</body>
+</html>
