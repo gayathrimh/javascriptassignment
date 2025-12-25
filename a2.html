@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Frame</title>
+</head>
+<body>
+    <h2>Clock Toggle</h2>
+    <img src="images/clock_09_00.jpg" id="clock" width="200">
+    <br>
+    <br>
+    <button id="btn">Click</button>
+    <script>
+        let clock=document.getElementById("clock");
+        let btn=document.getElementById("btn");
+
+    let images=[
+        'images/clock_09_15.jpg',
+        'images/clock_09_30.jpg',
+        'images/clock_09_45.jpg',
+        'images/clock_10_00.jpg',
+        'images/clock_10_15.jpg',
+        'images/clock_10_30.jpg',
+        'images/clock_10_45.jpg',
+        'images/clock_11_00.jpg',
+    ];
+    let index=0;
+    //index 0 to 7
+    btn.onclick=function(){
+        if(index<images.length-1){   //images.length - 8 images   0<8->8 is greater so 
+        
+            index=index+1;      //0=0+1
+            clock.src=images[index]; 
+    }
+    }
+        
+    </script>
+</body>
+</html>
