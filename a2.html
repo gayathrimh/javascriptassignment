@@ -25,7 +25,7 @@
         'images/clock_10_45.jpg',
         'images/clock_11_00.jpg',
     ];
-    let index=0;
+    let index=-1;
     //index 0 to 7
     btn.onclick=function(){
         if(index<images.length-1){   //images.length - 8 images   0<8->8 is greater so 
@@ -33,7 +33,7 @@
             index=index+1;      //0=0+1
             clock.src=images[index]; 
     }
-    }
+    };
         
     </script>
 </body>

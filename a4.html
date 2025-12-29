@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Toggle </title>
+    <h1>Rectangle with different shapes</h1>
+    <style>
+        h1{
+           color: blue;
+        }
+        button{
+            font-size: 20px;
+            padding: 10px;
+            background-color: lightgray;
+           
+        }
+    </style>
+</head>
+<body>
+    <img src="images/red.jpg" id="rectangle" width="250"><br><br>
+    <button id="btn">Click</button>
+    
+    <script>
+        const rectangle=document.getElementById("rectangle");
+        const btn=document.getElementById("btn");
+
+        let images=[
+            'images/red.jpg',
+            'images/green.jpg',
+            'images/blue.jpg',
+            'images/black.jpg'
+        ];
+        let index=0;
+        btn.onclick=function(){
+            if(index<images.length-1){
+                index++;
+            }
+            else{
+                index=0;
+            }
+            rectangle.src=images[index];
+            };
+        
+    </script>
+</body>
+</html>
